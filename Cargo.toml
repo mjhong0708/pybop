@@ -1,0 +1,26 @@
+[package]
+name = "pybop"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.maturin]
+python-source = "python"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pybop"
+crate-type = ["cdylib"]
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[dependencies]
+
+[dependencies.pyo3]
+version = "0.15.1"
+features = ["extension-module"]
+
