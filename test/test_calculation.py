@@ -2,7 +2,7 @@ import numpy as np
 from ase.build import bulk
 from pybop.bop import calculate_bop
 
-atoms = bulk("atoms", "fcc", a=3.92, cubic=True)
+atoms = bulk("Pt", "fcc", a=3.92, cubic=True)
 atoms = atoms.repeat((3, 3, 3))  # Supercell
 
 bop_params = 0.5 * np.ones((len(atoms), 8), dtype=np.float64)
